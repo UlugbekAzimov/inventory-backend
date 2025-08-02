@@ -11,8 +11,7 @@ app.use(express.json());
 
 // MongoDB ulanish
 mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  
 })
 .then(() => console.log('MongoDB ulandi'))
 .catch(err => console.error('MongoDB xato:', err));
@@ -31,3 +30,4 @@ app.get("/api/products", async (req, res) => {
 // Server boshlash
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server ishga tushdi: ${PORT}-portda`));
+
